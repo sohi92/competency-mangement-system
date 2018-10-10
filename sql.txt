@@ -1,0 +1,14 @@
+SELECT Skill_name, COUNT(*) AS number
+FROM skillset
+GROUP BY Skill_name;
+
+SELECT Specialization, COUNT(*) AS number FROM employee GROUP BY Specialization 
+
+SELECT Level, COUNT(*) AS number FROM skillset WHERE Skill_name = 'Python' GROUP BY Level 
+
+SELECT Designation, COUNT(*) AS number FROM employee GROUP BY Designation 
+select * from skillset order by Performance_rating desc limit 10 
+
+SELECT employee.Emp_id, employee.Fname,employee.Lname,skillset.Skill_name,skillset.Performance_rating FROM skillset LEFT JOIN employee ON skillset.Emp_id = employee.Emp_id ORDER BY Performance_rating desc limit 10
+
+SELECT Fname, Lname, Experiance FROM employee order by Experiance desc limit 10 
